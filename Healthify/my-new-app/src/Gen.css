@@ -1,0 +1,19 @@
+/* Gen.css */
+.card {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .card:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected {
+    background-color: #4caf50;
+    /* border: 2px solid #4caf50; */
+    color: #000;
+  }
+  

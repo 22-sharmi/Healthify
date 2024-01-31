@@ -1,0 +1,28 @@
+.card-container {
+    padding: 10px;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.selected {
+    border: 2px solid #ccc; /* Example border for selected cards */
+    background-color: #4caf50; /* Example background color for selected cards */
+}
+
+@media (max-width: 768px) {
+    .row-cols-2.justify-content-center {
+        flex-wrap: wrap;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+    .card-container {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}

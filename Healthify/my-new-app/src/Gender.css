@@ -1,0 +1,57 @@
+.gender {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .gender-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .gender-card {
+    width: 120px;
+    height: 120px;
+    background-color: #f0f0f083;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .gender-card.selected {
+    background-color: #4caf50;
+    color: #000;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .btn-back {
+    background-color: #333;
+    color: #fff;
+  }
+  .btn-back:hover{
+    background-color:rgba(41, 8, 47, 0.503);
+    color: #333;
+  }
+  .btn-next {
+    background-color: #333;
+  }
+  

@@ -1,0 +1,29 @@
+/* Lang.css */
+.lang-container {
+    padding: 20px;
+  }
+  
+  .lang-label {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .lang-select {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .lang-buttons {
+    margin-top: 20px;
+  }
+  
+  .lang-back-btn {
+    padding: 10px 20px;
+  }
+  
+  .lang-next-btn {
+    padding: 10px 40px;
+  }
+  

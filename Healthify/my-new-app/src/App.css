@@ -1,0 +1,21 @@
+/* 
+.card.selected {
+  border: 2px solid #28a745; 
+}
+
+.card-img-top {
+  max-height: 200px; 
+  object-fit: cover;
+}
+
+.form-check-input {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #28a745; 
+  border-color: #28a745;
+} */

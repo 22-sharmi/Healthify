@@ -1,0 +1,29 @@
+.video-background-overlay {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+    opacity: 0.6;
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+     /* Cover the entire container */
+}
+
+.overlay-content {
+    position: absolute;
+    top: 85%; /* Adjust the position vertically */
+    left: 50%; /* Adjust the position horizontally */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    width: 300px;
+}
