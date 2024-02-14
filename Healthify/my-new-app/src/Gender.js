@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Gender.css";
-import axios from "axios";
+
 
 export default function Gender() {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ export default function Gender() {
   const handleNextClick = async () => {
     if (selectedGender) {
       try {
-        await axios.post('http://localhost:8080/gender', { gender: selectedGender });
+        localStorage.setItem('gender', selectedGender); // Storing password in local storage
         // Log the selected gender to the console
         console.log(selectedGender);
         // Navigate to the '/age' route

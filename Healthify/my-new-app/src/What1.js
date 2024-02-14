@@ -19,12 +19,19 @@ export default function What1() {
 
     const handleNextClick = () => {
         if (selectedCards.length > 0) {
-            console.log("Selected Cards: ", selectedCards);
+            // Get the selected card titles
+            const selectedCardTitles = selectedCards.map(index => cardTitles[index]);
+            
+            // Store the selected card titles in local storage
+            localStorage.setItem('what', JSON.stringify(selectedCardTitles));
+            
+            console.log("Selected Card Titles: ", selectedCardTitles);
             navigate("/where");
         } else {
             alert("Please select at least one card.");
         }
     };
+    
 
     const cardImages = [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNF2JVntBBPlrmjWqCyfV1kbeO9zNfNi1-4Q&usqp=CAU",
@@ -57,7 +64,7 @@ export default function What1() {
                 <center>
                     <img
                         src="https://healthifyme.imgix.net/static/images/home_website/landing/assets/HealthifyMe-Logonew-logo.svg?auto=format"
-                        alt=""
+                        alt="logo"
                         style={{}}
                     />
                     <h3>What brings you to Healthify</h3>
@@ -76,7 +83,7 @@ export default function What1() {
                                     <img
                                         src={cardImages[index]}
                                         className="card-img-top"
-                                        alt={`Card Image ${index + 1}`}
+                                        alt={`Card ${index + 1}`}
                                         style={{ width: "50%", borderRadius: "8px" }}
                                     />
                                 </center>

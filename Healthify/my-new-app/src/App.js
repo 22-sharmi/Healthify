@@ -16,6 +16,7 @@ import What1 from './What1';
 import Welcome from './Welcome';
 import AgeHeightWeight from './AgeHeightWeight';
 import Gender from './Gender';
+import MultiStepForm from './MultiStepForm';
 
 export default function App() {
   return (

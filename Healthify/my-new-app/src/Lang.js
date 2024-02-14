@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Lang.css"; // Import CSS file for styling
@@ -11,7 +10,7 @@ export default function Lang() {
   const handleNextClick = async() => {
     if (selectedLanguage) {
       try {
-        await axios.post('http://localhost:5050/lang', { lang: selectedLanguage });
+        localStorage.setItem('lang', selectedLanguage); // Storing password in local storage
         // Log the selected language to the console
         console.log(selectedLanguage);
         

@@ -19,11 +19,12 @@ export default function Active() {
   // Function to handle click on 'Next' button
   const handleNextClick = () => {
     if (selectedCard) {
+      localStorage.setItem('active',selectedCard);
       // Log the selected activity level to the console
       console.log(selectedCard);
       
-      // Navigate to the '/weight-correction' route
-      navigate('/weight-correction');
+      // Navigate to the '/next' route
+      navigate('/name');
     } else {
       // Alert the user if no activity level is selected
       alert('Please select an activity level.');
@@ -91,7 +92,7 @@ export default function Active() {
         </div>
       </div>
       <div className="d-flex justify-content-between">
-        <a href="where.html" className="btn btn-dark">Back</a>
+        <a href="/age" className="btn btn-dark">Back</a>
         <button className="btn btn-next btn-dark" onClick={handleNextClick}>Next</button>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AhmedabadImage from './img/ahamedabad.png';
 import PuneImage from './img/pune images-removebg-preview.png';
@@ -6,25 +6,25 @@ import KanpurImage from './img/kanpur images-removebg-preview.png';
 
 export default function Where() {
   const navigate = useNavigate();
+  const [selectedCity, setSelectedCity] = useState('');
 
   // Function to handle city selection
   function selectCity(city) {
     document.getElementById('cities').value = city;
+    setSelectedCity(city);
   }
 
-  // Function to handle click on 'Next' button
-  function handleNextClick() {
-    // Get the selected city from the dropdown
-    const selectedCity = document.getElementById('cities').value;
+ // Function to handle click on 'Next' button
+ function handleNextClick() {
+  if (selectedCity) {
+    localStorage.setItem('city', selectedCity);
     console.log(`Selected City: ${selectedCity}`);
-
-    // Navigate to the '/lang' route
     navigate('/lang');
-
-    // Log a message to the console
     console.log('Next button clicked');
+  } else {
+    alert('Please select a city.');
   }
-
+}
   return (
     <div className="text-center container">
       <div>

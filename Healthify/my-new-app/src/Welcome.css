@@ -1,29 +1,62 @@
-.video-background-overlay {
+/* Welcome.css */
+.welcome-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 130px;
+}
+
+.join-btn {
+    margin-left: 5px;
+}
+
+.video-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Adjust the height as needed */
     overflow: hidden;
-    opacity: 0.6;
+}
+
+.overlay-content {
+    text-align:left;
+    color: darkslategrey;
+    padding: 50px;
 }
 
 .video-background {
     width: 100%;
-    height: 100%;
-    object-fit:cover;
-     /* Cover the entire container */
+    height: auto;
+    display: none; /* Initially hide the video */
 }
 
-.overlay-content {
-    position: absolute;
-    top: 85%; /* Adjust the position vertically */
-    left: 50%; /* Adjust the position horizontally */
-    transform: translate(-50%, -50%);
-    text-align: center;
+/* For medium and larger screens (e.g., laptops) */
+@media screen and (min-width: 768px) {
+    .overlay-content {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 20px); /* Adjust width based on your design */
+    }
+
+    .video-background {
+        display: inline-block;
+        width: calc(50% - 20px); /* Adjust width based on your design */
+        height: auto;
+    }
 }
 
-.overlay-button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    width: 300px;
+/* For small screens (e.g., mobile devices) */
+@media screen and (max-width: 767px) {
+    .video-background {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }

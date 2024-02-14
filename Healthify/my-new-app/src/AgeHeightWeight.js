@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import './AgeHeightWeight.css'; // Import custom CSS
 
 export default function AgeHeightWeight() {
@@ -12,8 +11,10 @@ export default function AgeHeightWeight() {
   const handleNextClick = async () => {
     if (age && height && weight) {
       try {
-        await axios.post('http://localhost:5000/user', { age, height, weight });
-        navigate('/next');
+        localStorage.setItem('age',age);
+        localStorage.setItem('height',height);
+        localStorage.setItem('weight',weight);
+        navigate('/active');
       } catch (error) {
         console.error('Error:', error);
         alert('An error occurred. Please try again later.');
